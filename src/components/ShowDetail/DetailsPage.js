@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LikeButton from "../LikeButton";
+import CommentSection from "../CommentSection"
 
 export default class DetailsPage extends Component {
   state = {
@@ -36,9 +37,14 @@ export default class DetailsPage extends Component {
           <h1>Show Details</h1>
           <div className="showDetailName">{name}</div>
           <img className="showDetailImage" src={image} alt="showImage" />
-          <div className="showDetailSummary">{summary}</div>
+          <div className="showDetailSummary"
+          dangerouslySetInnerHTML={{__html:summary}}>  
+          </div>
         </div>
         <LikeButton />
+        <div>
+        <CommentSection />        
+        </div>
       </div>
     );
   }
