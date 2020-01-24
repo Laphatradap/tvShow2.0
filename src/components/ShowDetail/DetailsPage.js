@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import LikeButton from "../LikeButton";
-import CommentSection from "../CommentSection"
+import LikeButton from "../LikeButton/LikeButton";
+import CommentSection from "./CommentSection"
+import "./DetailsPage.css"
 
 export default class DetailsPage extends Component {
   state = {
@@ -33,8 +34,7 @@ export default class DetailsPage extends Component {
     const { name, image, summary } = this.state.show;
     return (
       <div>
-        <div>
-          <h1>Show Details</h1>
+        <div className="container">
           <div className="showDetailName">{name}</div>
           <img className="showDetailImage" src={image} alt="showImage" />
           <div className="showDetailSummary"

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./DetailsPage.css";
 
 export default class CommentSection extends Component {
   state = {
@@ -11,7 +12,7 @@ export default class CommentSection extends Component {
     this.addComments(this.state.newComment);
     this.setState({
       newComment: ""
-    })
+    });
   };
 
   addComments = comment => {
@@ -36,9 +37,6 @@ export default class CommentSection extends Component {
     // console.log(this.state.newComment);
     return (
       <div>
-        {list.map(comment => {
-          return <p key={comment}>{comment}</p>;
-        })}
         <div className="commentForm">
           <form onSubmit={this.handleSubmit}>
             <label>
@@ -52,6 +50,9 @@ export default class CommentSection extends Component {
               <button className="addCommentButton" onClick={this.handleSubmit}>
                 Add your comment!
               </button>
+              {list.map(comment => {
+                return <p key={comment}>{comment}</p>;
+              })}
             </label>
           </form>
         </div>

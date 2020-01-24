@@ -1,0 +1,23 @@
+.showDetailName {
+  font-size: 60px;
+  text-align: center;
+  padding: 60px;
+  margin: 0 auto;
+}
+
+.showDetailImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.showDetailSummary {
+  margin: 0;
+  padding: 100px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.commentForm {
+  text-align: center;
+}
