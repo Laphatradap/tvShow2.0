@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import RandomShowList from "./RandomShowList";
 
-export default class RandomShowItem extends Component {
+export default class RandomShowContainer extends Component {
   state = {
     loading: true,
     shows: []
@@ -53,7 +53,11 @@ export default class RandomShowItem extends Component {
     return (
       <div>
         {shows.map(show => {
-          return <RandomShowList show={show} routerHistory={history} />;
+          return (
+            <div>
+              <RandomShowList show={show} routerHistory={history} />;
+            </div>
+          );
         })}
       </div>
     );
