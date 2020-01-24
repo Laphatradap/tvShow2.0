@@ -6,10 +6,12 @@ export default class RandomShowList extends Component {
     const showId = this.props.show.id;
     this.props.routerHistory.push(`/show/${showId}`);
   };
+  
   render() {
     console.log("props of randomshowlist", this.props);
+    
     const { name, image } = this.props.show;
-    if (this.props.error) {
+    if (this.props.error) {e .
       return <h3>{this.props.error}</h3>;
     } else {
       return (
@@ -24,7 +26,7 @@ export default class RandomShowList extends Component {
             </div>
           )}
         </div>
-      );
+      )
     }
   }
 }
