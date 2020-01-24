@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RandomShowList from "./RandomShowList";
+import style from "../RandomShow/RandomShowList.css";
 
 export default class RandomShowContainer extends Component {
   state = {
@@ -12,6 +13,7 @@ export default class RandomShowContainer extends Component {
   };
 
   componentDidMount = async () => {
+    this.getData();
     this.getData();
     this.getData();
     this.getData();
@@ -51,11 +53,11 @@ export default class RandomShowContainer extends Component {
     const { shows } = this.state;
     const { history } = this.props;
     return (
-      <div>
+      <div className="outerContainer">
         {shows.map(show => {
           return (
-            <div>
-              <RandomShowList show={show} routerHistory={history} />;
+            <div className="RandomShowListContainer">
+              <RandomShowList show={show} routerHistory={history} />
             </div>
           );
         })}
